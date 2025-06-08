@@ -46,13 +46,21 @@ You can follow same procedure in the official  AWS document [Getting started wit
    
    example:
    eksctl create cluster --name dhruv \
-      --region ap-south-1 \
+      --region us-east-1 \
    --node-type t2.small \
+
+*************************************************
+   eksctl create cluster --name dhruv \
+      --region us-east-1 \
+   --node-type t2.micro \
 
 
 5. To delete the EKS clsuter 
    ```sh 
    eksctl delete cluster dhruv --region ap-south-1
+
+   
+   eksctl delete cluster dhruv --region us-east-1
    ```
    
 6. Validate your cluster using by creating by checking nodes and by creating a pod 
