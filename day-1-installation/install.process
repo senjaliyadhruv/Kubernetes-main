@@ -47,7 +47,7 @@ You can follow same procedure in the official  AWS document [Getting started wit
    example:
    eksctl create cluster --name dhruv \
       --region us-east-1 \
-   --node-type t2.small \
+   --node-type t2.medium \
 
 *************************************************
    eksctl create cluster --name dhruv \
@@ -58,7 +58,6 @@ You can follow same procedure in the official  AWS document [Getting started wit
 5. To delete the EKS clsuter 
    ```sh 
    eksctl delete cluster dhruv --region ap-south-1
-
    
    eksctl delete cluster dhruv --region us-east-1
    ```
