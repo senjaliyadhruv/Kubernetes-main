@@ -51,9 +51,7 @@ You can follow same procedure in the official  AWS document [Getting started wit
 
 
 5. To delete the EKS clsuter 
-   ```sh 
-   eksctl delete cluster dhruv --region ap-south-1
-   
+   ```sh   
    eksctl delete cluster dhruv --region us-east-1
    ```
    
