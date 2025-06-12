@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: test-pv-claim
+  name: ebs-claim
 spec:
   accessModes:
     - ReadWriteOnce
@@ -10,14 +10,15 @@ spec:
   csi:
     driver: ebs.csi.aws.com
     fsType: ext4
-    volumeHandle: vol-09e680732bb7e9a96
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-        - matchExpressions:
-            - key: topology.ebs.csi.aws.com/zone
-              operator: In
-              values:
-                - ap-south-1a
-                - ap-south-1b
-                - ap-south-1c
+    volumeHandle: vol-0d212fbdb3e221045
+    # create additional volume same az and give the vol id above. and verify the k8 and nodegroup. 
+  # nodeAffinity:
+  #   required:
+  #     nodeSelectorTerms:
+  #       - matchExpressions:
+  #           - key: topology.ebs.csi.aws.com/zone
+  #             operator: In
+  #             values:
+  #               - us-east-1a
+  #               - us-ease-1b
+  #               - us-east-1c
